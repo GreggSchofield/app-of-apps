@@ -10,3 +10,9 @@ argocd app create app-of-apps \
     --repo https://github.com/GreggSchofield/app-of-apps.git \
     --path apps
 ```
+
+Sync the patent app to its target state via a label selector:
+
+```shell
+argocd app sync -l app.kubernetes.io/instance=app-of-apps
+```
